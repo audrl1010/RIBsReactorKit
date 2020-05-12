@@ -12,3 +12,4 @@ $(SRCROOT)/Carthage/Build/iOS/Rswift.framework
 $(SRCROOT)/Carthage/Build/iOS/SkeletonView.framework
 $(SRCROOT)/Carthage/Build/iOS/SnapKit.framework
 $(SRCROOT)/Carthage/Build/iOS/EPLogger.framework
+$(SRCROOT)/Carthage/Build/iOS/Gedatsu.framework

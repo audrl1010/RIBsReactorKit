@@ -84,6 +84,7 @@
 		DBEF8B36245F055700A37587 /* MainTabBarComponent+UserCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBEF8B35245F055700A37587 /* MainTabBarComponent+UserCollection.swift */; };
 		DBEF8B42245F511E00A37587 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBEF8B41245F511E00A37587 /* R.generated.swift */; };
 		DBEF8B45245F56B600A37587 /* Rswift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBEF8B3A245F4BE800A37587 /* Rswift.framework */; };
+		DBF78D6D246AD4DC00E19F86 /* Gedatsu.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBF78D6C246AD4DC00E19F86 /* Gedatsu.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -189,6 +190,7 @@
 		DBEF8B35245F055700A37587 /* MainTabBarComponent+UserCollection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MainTabBarComponent+UserCollection.swift"; sourceTree = "<group>"; };
 		DBEF8B3A245F4BE800A37587 /* Rswift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Rswift.framework; path = Carthage/Build/iOS/Rswift.framework; sourceTree = "<group>"; };
 		DBEF8B41245F511E00A37587 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = "<group>"; };
+		DBF78D6C246AD4DC00E19F86 /* Gedatsu.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Gedatsu.framework; path = Carthage/Build/iOS/Gedatsu.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -210,6 +212,7 @@
 				DBC142092448B6C900A9F3F6 /* SnapKit.framework in Frameworks */,
 				DBEF8B45245F56B600A37587 /* Rswift.framework in Frameworks */,
 				DBC142072448B6C900A9F3F6 /* EPLogger.framework in Frameworks */,
+				DBF78D6D246AD4DC00E19F86 /* Gedatsu.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -356,6 +359,7 @@
 		DBC141E42448B6C900A9F3F6 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				DBF78D6C246AD4DC00E19F86 /* Gedatsu.framework */,
 				DBEF8B3A245F4BE800A37587 /* Rswift.framework */,
 				DB09E82024572A7F00FAB536 /* Moya.framework */,
 				DBC141E92448B6C900A9F3F6 /* Alamofire.framework */,
