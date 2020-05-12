@@ -23,7 +23,7 @@ github "mac-cain13/R.swift.Library" ~> 5.2.0
 
 # ETC
 github "ElonPark/EPLogger" ~> 1.3.4
-github "bannzai/Gedatsu" == 1.0.5
+github "bannzai/Gedatsu" "master"
 
 # Test
 github "Quick/Quick" ~> 2.2.0
