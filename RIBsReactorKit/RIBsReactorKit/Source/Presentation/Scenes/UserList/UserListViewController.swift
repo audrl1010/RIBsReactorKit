@@ -10,9 +10,16 @@ import UIKit
 
 import RIBs
 import RxSwift
+import ReactorKit
+
+enum UserListPresentableAction {
+  case refresh
+  case loadMore
+  case itemSelected(IndexPath)
+}
 
 protocol UserListPresentableListener: class {
-
+  var state: Observable<UserListState> { get }
 }
 
 final class UserListViewController:
@@ -20,16 +27,16 @@ final class UserListViewController:
   UserListPresentable,
   UserListViewControllable
 {
-  
-  enum Action {
-    case refresh
-    case loadMore
-    case itemSelected(IndexPath)
-  }
-  
+    
   // MARK: - Properties
 
   weak var listener: UserListPresentableListener?
+  
+  // MARK: - UI Components
+
+  private var userListTableView = UITableView().then {
+    $0.register(UserListCell.self)
+  }
   
   // MARK: - Initialization & Deinitialization
 
@@ -66,7 +73,8 @@ private let deviceNames: [String] = [
 
 @available(iOS 13.0, *)
 struct UserListViewControllerPreview: PreviewProvider {
-  static var previews: some View {
+
+  static var previews: some SwiftUI.View {
     ForEach(deviceNames, id: \.self) { deviceName in
       UIViewControllerPreview {
         let viewController = UserListViewController()

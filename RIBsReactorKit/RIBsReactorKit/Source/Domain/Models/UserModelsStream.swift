@@ -6,7 +6,8 @@
 //  Copyright © 2020 Elon. All rights reserved.
 //
 
-import MapKit
+import Foundation
+import CoreLocation.CLLocation
 
 import RxSwift
 import RxRelay

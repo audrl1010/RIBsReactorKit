@@ -64,8 +64,7 @@ final class MainTabBarBuilder:
     let viewControllers = [
       component.userListViewController,
       component.userCollectionViewController
-      ]
-      .map { UINavigationController(root: $0) }
+      ].map { UINavigationController(root: $0) }
     
     let viewController = MainTabBarViewController(viewControllers: viewControllers)
     let interactor = MainTabBarInteractor(presenter: viewController)

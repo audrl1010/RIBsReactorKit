@@ -16,7 +16,6 @@ protocol UserListRouting: ViewableRouting {
 
 protocol UserListPresentable: Presentable {
   var listener: UserListPresentableListener? { get set }
-  
 }
 
 protocol UserListListener: class {
@@ -30,11 +29,13 @@ final class UserListInteractor:
   Reactor
 {
   
-  typealias Action = UserListViewController.Action
+  typealias Action = UserListPresentableAction
   
   enum Mutation {
     case none
+    case setLoading(Bool)
     case setLoadMore
+    case updateUserModel([UserModel])
   }
   
   typealias State = UserListState
@@ -44,7 +45,7 @@ final class UserListInteractor:
   weak var router: UserListRouting?
   weak var listener: UserListListener?
   
-  var initialState: UserListState = .init()
+  var initialState: UserListState
   
   private let randomUserUseCase: RandomUserUseCase
   
@@ -52,6 +53,7 @@ final class UserListInteractor:
 
   init(randomUserUseCase: RandomUserUseCase, presenter: UserListPresentable) {
     self.randomUserUseCase = randomUserUseCase
+    initialState = UserListState()
 
     super.init(presenter: presenter)
     presenter.listener = self
@@ -77,7 +79,8 @@ extension UserListInteractor {
   
   func transform(mutation: Observable<Mutation>) -> Observable<Mutation> {
     let updateUserModel = randomUserUseCase.mutableUserModelsStream.userModels
-      .
+      .map(Mutation.updateUserModel)
+      
     return Observable.of(mutation, updateUserModel).merge()
   }
   

@@ -26,6 +26,7 @@
 		DB5B7ACB245C800E00DC33D3 /* Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBDD9AC52454783200DBF510 /* Networking.swift */; };
 		DB630219246071CD00C47E09 /* UserListState.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB630218246071CD00C47E09 /* UserListState.swift */; };
 		DB63021B2460856C00C47E09 /* ViewControllableExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB63021A2460856C00C47E09 /* ViewControllableExtensions.swift */; };
+		DB63021E2461B85F00C47E09 /* UserListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB63021D2461B85F00C47E09 /* UserListCell.swift */; };
 		DBA28BA72455D0040071160B /* RandomUserRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBA28BA62455D0040071160B /* RandomUserRepository.swift */; };
 		DBA28BA92455ECFD0071160B /* RandomUserUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBA28BA82455ECFD0071160B /* RandomUserUseCase.swift */; };
 		DBA43B92245C9B6400C82D7E /* MainTabBarRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBA43B8E245C9B6400C82D7E /* MainTabBarRouter.swift */; };
@@ -129,6 +130,7 @@
 		DB4242DB245C851B0068C6BF /* UserModelTranslator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModelTranslator.swift; sourceTree = "<group>"; };
 		DB630218246071CD00C47E09 /* UserListState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListState.swift; sourceTree = "<group>"; };
 		DB63021A2460856C00C47E09 /* ViewControllableExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllableExtensions.swift; sourceTree = "<group>"; };
+		DB63021D2461B85F00C47E09 /* UserListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListCell.swift; sourceTree = "<group>"; };
 		DBA28BA62455D0040071160B /* RandomUserRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomUserRepository.swift; sourceTree = "<group>"; };
 		DBA28BA82455ECFD0071160B /* RandomUserUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomUserUseCase.swift; sourceTree = "<group>"; };
 		DBA43B8E245C9B6400C82D7E /* MainTabBarRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarRouter.swift; sourceTree = "<group>"; };
@@ -313,6 +315,14 @@
 				DBDD9AC724547D5400DBF510 /* Moya.framework */,
 			);
 			name = "Recovered References";
+			sourceTree = "<group>";
+		};
+		DB63021C2461B82200C47E09 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				DB63021D2461B85F00C47E09 /* UserListCell.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		DB9C7EF3245C97EC003AB2E7 /* MainTabBar */ = {
@@ -520,6 +530,7 @@
 		DBC52DD82454560800BCFEBB /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				DB63021C2461B82200C47E09 /* Views */,
 				DBA43B97245C9BF800C82D7E /* UserCollection */,
 				DBA43B96245C9BED00C82D7E /* UserList */,
 				DB9C7EF3245C97EC003AB2E7 /* MainTabBar */,
@@ -886,6 +897,7 @@
 				DBA43BBA245EF50000C82D7E /* RootComponent+MainTabBar.swift in Sources */,
 				DBEB56502455AB4E0054D41E /* RandomUserService.swift in Sources */,
 				DBEB56532455B15F0054D41E /* RandomUserFixture.swift in Sources */,
+				DB63021E2461B85F00C47E09 /* UserListCell.swift in Sources */,
 				DBEF8B34245F054100A37587 /* MainTabBarComponent+UserList.swift in Sources */,
 				DBEF8B36245F055700A37587 /* MainTabBarComponent+UserCollection.swift in Sources */,
 				DBA43B9F245C9C2100C82D7E /* UserListInteractor.swift in Sources */,
